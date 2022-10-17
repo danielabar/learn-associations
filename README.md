@@ -1,5 +1,7 @@
 # README
 
+A Rails project to learn about the various `dependent` options that can be declared on ActiveRecord associations and how they impact model destroying/deletion and referential integrity.
+
 ```
 bin/rails g annotate:install
 bin/rails db:create
