@@ -57,6 +57,13 @@ group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
 
+  # Add schema info as comments at the top of model classes [https://github.com/ctran/annotate_models]
+  gem "annotate"
+
+  gem "rubocop"
+  gem "rubocop-rails"
+  gem "solargraph"
+
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
 

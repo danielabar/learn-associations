@@ -1,5 +1,11 @@
 # README
 
+```
+bin/rails g annotate:install
+bin/rails db:create
+bin/rails db:migrate
+```
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
