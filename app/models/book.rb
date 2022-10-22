@@ -18,11 +18,8 @@
 #  author_id  (author_id => authors.id)
 #
 class Book < ApplicationRecord
-  # book.destroy will try to delete associated author but fail if author has other books
-  # so it will NOT leave orphaned records, but rather, will error out.
-  # if associated author has only this one book, then destroy will delete this book and the author
-  # belongs_to :author, dependent: :destroy
-  belongs_to :author
+  # belongs_to :author
+  belongs_to :author, dependent: :destroy
   before_destroy :one_last_thing
   def one_last_thing
     puts "Book model #{id} will be destroyed"
