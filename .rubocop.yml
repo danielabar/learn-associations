@@ -24,3 +24,8 @@ Style/Documentation:
 
 Style/StringLiterals:
   EnforcedStyle: double_quotes
+
+Metrics/BlockLength:
+  IgnoredMethods: ['describe', 'it', 'context']
+  Exclude:
+    - 'spec/**/*.rb'

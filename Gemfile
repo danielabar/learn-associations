@@ -76,4 +76,6 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
   gem "webdrivers"
+  # Use RSpec instead of Minitest for testing
+  gem 'rspec-rails'
 end

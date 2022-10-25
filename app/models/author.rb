@@ -16,6 +16,6 @@ class Author < ApplicationRecord
   # has_many :books, dependent: :restrict_with_error
   before_destroy :one_last_thing
   def one_last_thing
-    puts "Author model #{id} will be destroyed"
+    Rails.logger.warn("Author model #{id} will be destroyed")
   end
 end

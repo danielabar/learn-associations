@@ -3,11 +3,13 @@
 Post.create!(title: "Hello Post", body: "Learning about destroy and delete in Rails.")
 Post.create!(title: "Another Post", body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.")
 
-# Authors with at least one book each
+# Author with multiple books
 author_ap = Author.create!(name: "Andrew Park")
+
+# Author with a single book
 author_jjk = Author.create!(name: "Julian James McKinnon")
 
-# Author with no books in the system
+# Author with no books
 Author.create!(name: "John Doe")
 
 # Create 3 books for Andrew Park and just one book for Julian James McKinnon
