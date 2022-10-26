@@ -29,3 +29,6 @@ Metrics/BlockLength:
   IgnoredMethods: ['describe', 'it', 'context']
   Exclude:
     - 'spec/**/*.rb'
+
+Layout/LineLength:
+  Max: 200
