@@ -12,6 +12,6 @@ class Post < ApplicationRecord
   before_destroy :one_last_thing
 
   def one_last_thing
-    puts "Post model #{id} will be destroyed just after this runs"
+    puts "Post model #{id} will be destroyed"
   end
 end
