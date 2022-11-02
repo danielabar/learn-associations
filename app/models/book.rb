@@ -22,6 +22,6 @@ class Book < ApplicationRecord
   # belongs_to :author, dependent: :destroy
   before_destroy :one_last_thing
   def one_last_thing
-    Rails.logger.warn("Book model #{id} will be destroyed")
+    Rails.logger.warn("  Book model #{id} will be destroyed")
   end
 end

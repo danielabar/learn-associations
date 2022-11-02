@@ -16,4 +16,4 @@ test_db:
 test:
 	-rm log/test.log
 	-bundle exec rspec
-	bat log/test.log
+	bat -p --paging=never log/test.log
