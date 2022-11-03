@@ -16,4 +16,5 @@ test_db:
 test:
 	-rm log/test.log
 	-bundle exec rspec
+	./scripts/process_log.sh
 	bat -p --paging=never log/test.log

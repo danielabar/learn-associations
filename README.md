@@ -30,16 +30,3 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
-
-## Experiment
-
-https://linuxize.com/post/how-to-use-sed-to-find-and-replace-string-in-files/
-https://superuser.com/questions/380772/removing-ansi-color-codes-from-text-stream
-https://github.com/rails/rails/blob/5-0-stable/activesupport/lib/active_support/log_subscriber.rb
-
-
-```bash
-grep "\e\[31m" log/development.log
-sed -i 's/SEARCH_REGEX/REPLACEMENT/g' INPUTFILE
-sed -i '.bak' 's/\e\[31m/<span class="rails-log-red">/g' log/test.log
-```
