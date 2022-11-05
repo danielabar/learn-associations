@@ -1,3 +1,12 @@
+# == Schema Information
+#
+# Table name: authors
+#
+#  id         :integer          not null, primary key
+#  name       :string
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
 require "rails_helper"
 
 # Exploratory tests to understand how ActiveRecord `destroy!` and `delete` work
@@ -23,7 +32,7 @@ describe Author, type: :model do
       end
     end
 
-    it "remove an author with a single book" do
+    fit "remove an author with a single book" do
       author = Author.find_by(name: "Julian James McKinnon")
       begin
         author.destroy!
@@ -32,7 +41,7 @@ describe Author, type: :model do
       end
     end
 
-    it "remove an author with multiple books" do
+    fit "remove an author with multiple books" do
       author = Author.find_by(name: "Andrew Park")
       begin
         author.destroy!

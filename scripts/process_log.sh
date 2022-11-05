@@ -10,7 +10,7 @@ sed -i '.bak' 's/\x1b\[0m/<\/span>/g' log/test.log
 # bold does not have its own clear so just remove it otherwise HTML spans will be unbalanced
 sed -i '.bak' 's/\x1b\[1m//g' log/test.log
 # black
-sed -i '.bak' 's/\x1b\[30m/<span class="rails-log-red">/g' log/test.log
+sed -i '.bak' 's/\x1b\[30m/<span class="rails-log-black">/g' log/test.log
 # red
 sed -i '.bak' 's/\x1b\[31m/<span class="rails-log-red">/g' log/test.log
 # green

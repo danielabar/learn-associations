@@ -6,6 +6,7 @@ class CreateBooks < ActiveRecord::Migration[7.0]
       t.references :author, null: false, foreign_key: true
       # for experimentation in allowing a nullable foreign key
       # t.references :author, foreign_key: true
+      # t.references :author
 
       t.timestamps
     end

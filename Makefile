@@ -1,13 +1,11 @@
 reset:
 	bin/rails db:reset
-	bin/rails c
 
 migrate_from_start:
 	bin/rails db:drop
 	bin/rails db:create
 	bin/rails db:migrate
 	bin/rails db:seed
-	bin/rails c
 
 test_db:
 	bin/rails db:test:prepare
@@ -17,4 +15,10 @@ test:
 	-rm log/test.log
 	-bundle exec rspec
 	./scripts/process_log.sh
+	cat log/test.log | pbcopy
+	echo "test log copied to clipboard"
+
+test_orig:
+	-rm log/test.log
+	-bundle exec rspec
 	bat -p --paging=never log/test.log
