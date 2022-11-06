@@ -32,21 +32,23 @@ describe Author, type: :model do
       end
     end
 
-    fit "remove an author with a single book" do
+    it "remove an author with a single book" do
       author = Author.find_by(name: "Julian James McKinnon")
       begin
         author.destroy!
       rescue StandardError => e
         Rails.logger.error("#{e.class} - #{e.message}")
+        # Rails.logger.warn("AUTHOR ERRORS: #{author.errors.full_messages}")
       end
     end
 
-    fit "remove an author with multiple books" do
+    it "remove an author with multiple books" do
       author = Author.find_by(name: "Andrew Park")
       begin
         author.destroy!
       rescue StandardError => e
         Rails.logger.error("#{e.class} - #{e.message}")
+        # Rails.logger.warn("AUTHOR ERRORS: #{author.errors.full_messages}")
       end
     end
   end
