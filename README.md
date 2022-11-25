@@ -1,6 +1,8 @@
 # README
 
-A Rails project to learn about the various `dependent` options that can be declared on ActiveRecord associations and how they impact model destroying/deletion and referential integrity.
+A Rails project to learn about the various `dependent` options that can be declared on ActiveRecord associations and how they impact model destroying/deletion and referential integrity. This is a companion project for this [blog post](https://danielabaron.me/blog/activerecord-dependent-options).
+
+## First Time Setup
 
 ```
 bin/rails g annotate:install
@@ -8,25 +10,30 @@ bin/rails db:create
 bin/rails db:migrate
 ```
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Run Tests
 
-Things you may want to cover:
+Regular:
 
-* Ruby version
+```
+make test
+```
 
-* System dependencies
+Display isolated log output with bat:
 
-* Configuration
+```
+make test_bat
+```
 
-* Database creation
+Syntax highlighted log output copied to clipboard for blog:
 
-* Database initialization
+```
+make test_blog
+```
 
-* How to run the test suite
+## Experiment with Migration(s)
 
-* Services (job queues, cache servers, search engines, etc.)
+If a migration is modified (would never do for a real application but this is an experiment):
 
-* Deployment instructions
-
-* ...
+```
+make migrate_from_start
+```

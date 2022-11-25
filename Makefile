@@ -12,13 +12,16 @@ test_db:
 	RAILS_ENV=test bin/rails db:seed
 
 test:
+	bundle exec rspec
+
+test_blog:
 	-rm log/test.log
 	-bundle exec rspec
 	./scripts/process_log.sh
 	cat log/test.log | pbcopy
 	echo "test log copied to clipboard"
 
-test_orig:
+test_bat:
 	-rm log/test.log
 	-bundle exec rspec
 	bat -p --paging=never log/test.log
